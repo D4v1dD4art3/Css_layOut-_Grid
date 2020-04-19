@@ -4,3 +4,13 @@ body {
    font-family: 'Courier New', Courier, monospace;
    margin: 0;
 }
+.container {
+ display: grid;
+ grid-template-columns: 25% 200px 25%;
+ grid-template-rows: 100px 200px 25%;    
+}
+.item {
+background-color: lightblue;
+padding: 10px;
+border: 1px solid red;
+}
