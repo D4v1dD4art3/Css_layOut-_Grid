@@ -5,12 +5,20 @@ body {
    margin: 0;
 }
 .container {
+   margin: 50px;
  display: grid;
- grid-template-columns: 25% 200px 25%;
- grid-template-rows: 100px 200px 25%;    
+ /* grid-template-columns: 25% 200px 25%; */
+ /* grid-template-rows: 100px 200px 25% 100p*/
+ /* grid-template: rows / columns */
+ grid-template: 100px 200px 25% / 25% 200px 25%;
 }
+
 .item {
 background-color: lightblue;
 padding: 10px;
 border: 1px solid red;
+}
+.separacion {
+   padding: 10px;
+   margin: 1em;
 }
