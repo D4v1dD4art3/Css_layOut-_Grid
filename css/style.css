@@ -10,15 +10,15 @@
  /* grid-template-rows: 100px 200px 25% 100p*/
  /* grid-template: rows / columns */
  /* grid-template: 100px 100px 100px 100px / repeat(4, minmax(200px, 1fr)); */
- grid-template: 100px 1fr 150px / 200px 1fr;
+ grid-template: 60px 1fr 1fr / 100px 1fr;
  /* grid-column-gap: 10px;
     grid-row-gap: 20px ; */
  /* grid-gap: filas columnas ; */
- grid-gap: 10px;
+ /* grid-gap: 10px; */
  height: 100vh;
  grid-template-areas: "header header"
                       "left contenido"
-                      "footer footer" ;
+                      "left contenido" ;
 }
 
       .item {
@@ -26,29 +26,43 @@ background-color: lightblue;
 padding: 10px;
 /* border: 1px solid red; */
 }
-      .item:nth-of-type(5) {
-         background-color: red;
-         overflow: auto;
-         display: grid;
-         /* display: inline-grid; */
-         grid-template: 50px 50px / 50px 50px 50px;
-      }
-      .item .item {
-         background-color: yellow;
-      }
       .header {
+         display: flex;
          color: white;
          grid-area: header;
          background-color:rgb(81, 142, 207) ;
-         border-radius: 10px;
+         /* border-radius: 10px; */
          text-align: center;
-         line-height: 100px;
+         /* line-height: 100px; */
          font-weight: bold;
+         position: relative;
+         justify-content: space-between;
+      }
+      .header-menu {
+         width:50px;
+         position: relative;
+      }
+      .header-img {
+         position: relative;
+         
+      }
+      .logo {
+         position: absolute;
+         left: -4px;
+         top: -82px;
+      }
+      .arrow {
+         /* width: 100%; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
       }
       .left {
          grid-area: left;
          background-color:rgb(234, 112, 46) ;
-         border-radius: 10px;
+         /* border-radius: 10px; */
          text-align: center;
          color: white;
          line-height: 165px;
@@ -57,13 +71,13 @@ padding: 10px;
       .contenido {
          grid-area: contenido;
          background-color:rgb(156, 154, 156) ;
-         border-radius: 10px;
+         /* border-radius: 10px; */
          text-align: center;
          color: white;
          line-height: 165px;
          font-weight: bold;
       }
-      .footer {
+      /* .footer {
          grid-area: footer;
          background-color: rgb(131, 111, 188) ;
          border-radius: 10px;
@@ -71,4 +85,4 @@ padding: 10px;
          color: white;
          line-height: 150px;
          font-weight: bold;
-      }
+      } */
