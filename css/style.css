@@ -1,6 +1,7 @@
       body {
-   background: rgb(238,174,202);
-   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+         margin: 0;
+   /* background: rgb(238,174,202); */
+   /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
    font-family: 'Courier New', Courier, monospace;
    /* margin: 0; */
 }
@@ -21,37 +22,51 @@
                       "left contenido" ;
 }
   .header {
+   box-shadow: 0px 7px 15px 1px rgba(0,0,0,0.75);
          display: flex;
          color: white;
          grid-area: header;
-         background-color:rgb(81, 142, 207) ;
+         background-color:white ;
          /* border-radius: 10px; */
          text-align: center;
          /* line-height: 100px; */
          font-weight: bold;
          position: relative;
-         justify-content: space-between;
+         justify-content: flex-end;
       }
       .header-menu {
-         width:50px;
+
+         display: flex;
+         width:210px;
          position: relative;
       }
-      .header-img {
+      .letra {
          position: relative;
-         
+         margin-left: 5px;
+         border-radius: 30px;
+         object-fit: cover;
+         height: 41px;
+         align-self: center; 
+      }
+
+      .header-menu p {
+         color: black;
+         display: inline;
+         align-self: center;
       }
       .logo {
          position: absolute;
-         left: -4px;
-         top: -82px;
+         left: 0;
+         top: -70px;
       }
       .arrow {
          /* width: 100%; */
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 22px;
+        left: 167px;
         bottom: 0;
         right: 0;
+        height: 20px;
       }
       .left {
          grid-area: left;
@@ -70,5 +85,16 @@
          color: white;
          line-height: 165px;
          font-weight: bold;
+      }
+      .form {
+         display:flex;
+         margin-right: 285px;
+      }
+      .form input {
+         text-align: center;
+         align-self: center;
+         width: 400px;
+         border-radius: 5px;
+         padding: 10px;
       }
    
