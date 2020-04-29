@@ -20,13 +20,7 @@
                       "left contenido"
                       "left contenido" ;
 }
-
-      .item {
-background-color: lightblue;
-padding: 10px;
-/* border: 1px solid red; */
-}
-      .header {
+  .header {
          display: flex;
          color: white;
          grid-area: header;
@@ -77,12 +71,4 @@ padding: 10px;
          line-height: 165px;
          font-weight: bold;
       }
-      /* .footer {
-         grid-area: footer;
-         background-color: rgb(131, 111, 188) ;
-         border-radius: 10px;
-         text-align: center;
-         color: white;
-         line-height: 150px;
-         font-weight: bold;
-      } */
+   
