@@ -22,7 +22,7 @@
                       "left contenido" ;
 }
   .header {
-   box-shadow: 0px 7px 15px 1px rgba(0,0,0,0.75);
+         box-shadow: 106px 7px 15px 1px #e3e3e3;
          display: flex;
          color: white;
          grid-area: header;
@@ -44,6 +44,7 @@
          position: relative;
          margin-left: 5px;
          border-radius: 30px;
+         border: 1px solid black;
          object-fit: cover;
          height: 41px;
          align-self: center; 
@@ -69,17 +70,81 @@
         height: 20px;
       }
       .left {
+         grid-gap: 40px;
+         /* overflow: auto; */
+         /* display: flex;  */
          grid-area: left;
-         background-color:rgb(234, 112, 46) ;
+         background: rgb(239,84,90);
+         background: linear-gradient(90deg, rgba(239,84,90,1) 0%, rgba(240,107,106,1) 71%, rgba(240,108,106,1) 73%);
          /* border-radius: 10px; */
-         text-align: center;
+         /* text-align: center; */
          color: white;
-         line-height: 165px;
          font-weight: bold;
+         border: 1px solid red;
+         display: grid;
+         grid-template-rows: repeat(3,80px) 1fr;
+         grid-template-columns:1fr;
+         grid-template-areas: "home"
+                             "treding"
+                              "likes"
+                              "settings";
+      }
+    
+      .left-home{
+         padding: 10px;
+         display: grid;
+         /* align-self: center; */
+         grid-area: home;
+         /* grid-template:100px / 100px; */
+      }
+      
+      .left-treding figure,
+      .left-likes figure,
+      .left-home figure {
+         margin: 0;
+         justify-self: center;
+         align-self: center;
+      }
+      .left-likes p,
+      .left-treding p,
+      .left-home div{
+         justify-self: center;
+         align-self: center;
+         margin: 0;
+         text-align: center;
+      }
+      .left-treding{
+         padding: 10px;
+         display: grid;
+         /* align-self: center; */
+         grid-area: treding;
+         /* grid-template:100px / 100px; */
+      }
+      .left-likes {
+         padding: 10px;
+         display: grid;
+         /* align-self: center; */
+         grid-area: likes;
+         /* grid-template:100px / 100px; */
+      }
+      .settings {
+         grid-area: settings;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+      }
+      .settings figure {
+         margin: 0;
+      }
+      .settings p {
+         margin: 0;
+         
       }
       .contenido {
          grid-area: contenido;
-         background-color:rgb(156, 154, 156) ;
+         background-color:white ;
          /* border-radius: 10px; */
          text-align: center;
          color: white;
@@ -96,5 +161,6 @@
          width: 400px;
          border-radius: 5px;
          padding: 10px;
+         border: 2px solid #dbdbe2;
       }
    
