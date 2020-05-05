@@ -156,32 +156,34 @@
       }
       
       .contenido {
-         justify-content: center;
-         margin-top: 10px;
-         grid-area: contenido;
-         background-color:white ;
-         /* border-radius: 10px; */
-         /* text-align: center; */
-         color: black;
-         /* line-height: 165px; */
-         font-weight: bold;
          display: grid;
-         grid-template: 20px 1fr 20px 1fr 20px 1fr / repeat(3, 400px) ;
-         grid-gap: 30px;
-         /* margin: 30px 100px; */
-         /* box-sizing: 1500px 760px; */
-         padding:32px 81px;
+         grid-template-columns: repeat(3, minmax(100px,1fr));
+         grid-gap: 5px;
+         justify-content: center;
+         /* align-content: center; */
+         /* overflow: auto; */
       }
       .item {
-         display: flex;
-         align-items: flex-end;
-         /* background-image:url(https://i.imgur.com/RifXVJw.jpg); */
-         background-size: 368px 200px;
-         /* padding: 20px; */
-         /* /* border: 1px solid red; */ 
-         object-fit: cover;
-         background-repeat: no-repeat;
+         /* background-color:aqua ; */
+         /* width: 200px; */
       }
+      .item-image {
+         margin: 0;
+
+      }
+      .item-image img {
+         width: 100%;
+         vertical-align: top;
+      }
+      /* .level-1 {
+         grid-row-end: span 2;
+      }
+      .level-2 {
+         grid-row-end: span 2 ;
+      }
+      .level-3 {
+         grid-row-end: span 2;
+      } */
       /* .item:nth-of-type(1) {
          /* background: red; */
          /* grid-column-start:1 ;
@@ -245,134 +247,36 @@
          padding-left: 16px;
          margin-top: 8px;
       }
-      .item:nth-of-type(2) {
-         /* justify-self: center; */
+      /* .item:nth-of-type(2) {
+         justify-self: center;
          display: flex;
          align-items: flex-end;
          background-image:url(https://i.imgur.com/i2XL11Q.jpg);
          background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
+         padding: 20px;
+         border: 1px solid red;
          object-fit: cover;
          background-repeat: no-repeat;
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
+         background-color: yellow;
+         position: relative;
+         z-index: 1;
          box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(3) {
+      } */
+      /* .item:nth-of-type(3) {
          display: flex;
          align-items: flex-end;
          background-image:url(https://i.imgur.com/AXORrMb.jpg);
          background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
+         padding: 20px;
+         border: 1px solid red;
          object-fit: cover;
          background-repeat: no-repeat;
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
+         background-color: yellow;
+         position: relative;
+         z-index: 1;
          box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(4) {
-         display: flex;
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/LW4SDSG.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-      }
-      .item:nth-of-type(6) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/GnYJnlr.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(7) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/6wgUBQQ.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(8) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/GD8SYgc.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-   
-      .item:nth-of-type(10) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/voxRwOO.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(11) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/ID08rsw.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
-      .item:nth-of-type(12) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/i2yIxyZ.jpg);
-         background-size: 431px 200px;
-         /* padding: 20px; */
-         /* border: 1px solid red; */
-         object-fit: cover;
-         /* background-repeat: no-repeat; */
-         /* background-color: yellow; */
-         /* position: relative; */
-         /* z-index: 1; */
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      }
+      } */
+      
       @media screen and (max-width: 1024px) {
         .header {
             display: flex;
