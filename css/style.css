@@ -7,15 +7,7 @@
 }
       .container {
  display: grid;
- /* grid-template-columns: 25% 200px 25%; */
- /* grid-template-rows: 100px 200px 25% 100p*/
- /* grid-template: rows / columns */
- /* grid-template: 100px 100px 100px 100px / repeat(4, minmax(200px, 1fr)); */
  grid-template: 60px 1fr 1fr / 100px 1fr;
- /* grid-column-gap: 10px;
-    grid-row-gap: 20px ; */
- /* grid-gap: filas columnas ; */
- /* grid-gap: 10px; */
  height: 100vh;
  grid-template-areas: "header header"
                       "left contenido"
@@ -210,36 +202,6 @@
          padding-left: 16px;
          margin-top: 8px;
       }
-      /* .item:nth-of-type(2) {
-         justify-self: center;
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/i2XL11Q.jpg);
-         background-size: 431px 200px;
-         padding: 20px;
-         border: 1px solid red;
-         object-fit: cover;
-         background-repeat: no-repeat;
-         background-color: yellow;
-         position: relative;
-         z-index: 1;
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      } */
-      /* .item:nth-of-type(3) {
-         display: flex;
-         align-items: flex-end;
-         background-image:url(https://i.imgur.com/AXORrMb.jpg);
-         background-size: 431px 200px;
-         padding: 20px;
-         border: 1px solid red;
-         object-fit: cover;
-         background-repeat: no-repeat;
-         background-color: yellow;
-         position: relative;
-         z-index: 1;
-         box-shadow: 0px 0px 18px 12px rgba(209,198,209,1);
-      } */
-      
       @media screen and (max-width: 1024px) {
         .header {
             display: flex;
@@ -255,25 +217,8 @@
            /* position: fixed; */
         }
         .contenido {
-           margin: 0;
-           padding: 0;
-           grid-gap: 5px;
-
-   justify-content: center;
-    /* margin-top: 10px; */
-    grid-area: contenido;
-    background-color: white;
-    /* border-radius: 10px; */
-    /* text-align: center; */
-    color: black;
-    /* line-height: 165px; */
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: repeat(auto-fill, 1fr);
-    grid-gap: 30px;
-    /* margin: 30px 100px; */
-    padding: 32px 81px;
+         margin-top: 1em;
+           grid-gap: 1em;
         }
         
     }
@@ -282,11 +227,28 @@
             padding: 9px 0px;
             width: 300px;
         }
+        .contenido {
+           margin-right: 1em;
+           margin-left:1em ;
+           grid-template-columns: 1fr 1fr;
+        }
+        .contenido--title {
+           align-self: center;
+           height: 0.5em;
+           grid-column: 1 / 2 span;
+        }
+        .item:nth-of-type(7),
+        .item:nth-of-type(4),
+        .item:nth-of-type(1) {
+           grid-column: 1 / 2 span;
+        }
+        .container {
+         grid-template: 50px 1fr 1fr / 90px 1fr; 
+        }
       }
       @media screen and (max-width: 420px) {
           .header-menu {
               display: flex;
-              /* width: 100px; */
           }
           .form {
              width:20em;
@@ -296,8 +258,43 @@
             width: 170px;
         }
           .arrow {
-              /* width: 100%; */
               position: relative;
               left: 0
           }
+          .left {
+             grid-gap: 1.5em;
+         grid-template-rows: repeat(3,80px) 1fr;
+          }
+
+          .settings img,
+          .left-likes img,
+          .left-treding img,
+          .left-home img {
+            width: 100%;
+          }
+          .left-likes p, 
+          .left-treding p, 
+          .left-home div {
+             font-size: .5em;
+          }
+          .contenido {
+            margin-right: 1em;
+            margin-left:1em ;
+            grid-template-columns: 250px ;
+         }
+         .contenido--title {
+            align-self: center;
+            height: 0.5em;
+            grid-column: 1 / 1 span;
+         }
+         .header-img { display: none;
+         }
+         .item:nth-of-type(7),
+        .item:nth-of-type(4),
+        .item:nth-of-type(1) {
+           grid-column: 1 / 1 span;
+        }
+        .container {
+         grid-template: 60px 1fr 1fr / 70px 1fr;
+        }
     }
